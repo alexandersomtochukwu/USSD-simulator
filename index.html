@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSD Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="phone">
+       <div class="notch"></div>
+        <div class="screen">
+           <div class="dialog">
+               <p class="title">USSD code Running.... </p>
+               <p id="screen" class="message"> Dial a USSD code. Try *123# </p>
+           </div>
+        </div>
+
+        <form  id="form" class="controls">
+            <input type="text" id="ussdInput" placeholder="Enter USSD code" autocomplete="off" autofocus>
+            <div class="buttons">
+               <button type="button" class="btn" id="cancel-btn" onclick="location.reload()">cancel</button>
+                <button type="submit" class="btn" id="send-btn">Send</button>
+       
+            </div>
+        </form>
+
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

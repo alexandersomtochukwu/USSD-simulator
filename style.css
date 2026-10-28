@@ -1,0 +1,135 @@
+:root {
+    --font-outfit: 'Outfit', sans-serif;
+    --background-color: #0f172a;
+    --accent-color: #16a34a;
+    --danger-color: #dc2626;
+    --screen-color: #f1f5f9;
+    --phone-color: #1e293b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-outfit);
+    background-color: var(--background-color);
+    color: var(--screen-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.phone {
+    width: 320px;
+     padding: 20px 16px 24px;
+    background-color: var(--phone-color);
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.notch {
+    width: 90px;
+    height: 10px;
+    margin: 0 auto 16px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: #334155;
+    border-radius: 12px;
+    min-height: 300px;
+}
+
+.dialog {
+    width: 100%;
+    max-width: 280px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    letter-spacing: 1.5px;
+}
+
+.message {
+    font-size: 16px;
+    margin: 0 0 1px;
+    color: var(--screen-color);
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.controls {
+    margin-top: 16px;
+    padding-bottom: 15px;
+    padding-top: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 16px;
+    border: 2px solid #475569;
+    border-radius: 10px;
+    background-color: var(--screen-color);
+    color: var(--background-color);
+    outline: none;
+
+}
+
+input:focus {
+    border-color: 4px solid var(--background-color);
+
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#send-btn {
+    background-color: var(--accent-color);
+    color: var(--screen-color);
+}
+
+#cancel-btn {
+    background-color: var(--danger-color);
+    color: var(--screen-color);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
